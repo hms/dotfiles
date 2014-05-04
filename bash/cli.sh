@@ -5,3 +5,6 @@ set -o vi
 # Make bash check its window size after each command, to keep $LINES and
 # $COLUMNS correct.
 shopt -s checkwinsize
+
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim

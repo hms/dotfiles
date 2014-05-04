@@ -1,1 +1,4 @@
-[ -r /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
