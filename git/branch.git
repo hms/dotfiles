@@ -29,13 +29,20 @@
   # `git branch` or `git checkout`, i.e. non-master.
   autosetuprebase = always
 
-[mergetool]
-	keepBackup = false
 [rebase]
 	autosquash = true
-[merge]
-	tool = gvimdiff
 [rerere]
 	enabled = 1
+[merge]
+	tool = p4mergetool
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$LOCAL $PWD/$REMOTE $PWD/$MERGED
+	trustExitCode = false
+[mergetool]
+	keepBackup = false
+[diff]
+	tool = p4mergetool
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE
 
 # vim:ft=gitconfig:
