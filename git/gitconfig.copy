@@ -11,5 +11,4 @@
   path = .dotfiles/git/refs.git
   path = .dotfiles/git/remote.git
 
-
 # vim:ft=gitconfig:

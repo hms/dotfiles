@@ -1,0 +1,18 @@
+#vim:ft=ruby
+require 'irb/completion'
+require 'rubygems' rescue nil
+
+ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
+IRB.conf[:AUTO_INDENT]=true 
+
+#############################################
+#
+# install helpful gems for every irb session
+#
+#############################################
+begin
+  require 'hirb'
+  Hirb.enable
+rescue
+  puts "Error loading or initializing 'hirb'"
+end
