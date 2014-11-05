@@ -13,3 +13,8 @@ else
 endif
 
 set guifont=consolas:h16
+
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_aggregate_errors = 1
+let ruby_fold = 1
+let ruby_operators = 1
