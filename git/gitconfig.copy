@@ -12,3 +12,6 @@
   path = .dotfiles/git/remote.git
 
 # vim:ft=gitconfig:
+[user]
+	name = Hal M. Spitz
+	email = hal.spitz@gmail.com
