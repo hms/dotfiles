@@ -1,6 +1,7 @@
 #vim:ft=ruby
 require 'irb/completion'
 require 'rubygems' rescue nil
+require 'awesome_print'
 
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 IRB.conf[:AUTO_INDENT]=true 
@@ -16,3 +17,6 @@ begin
 rescue
   puts "Error loading or initializing 'hirb'"
 end
+
+AwesomePrint.irb! rescue nil
+AwesomePrint.pry! rescue nil

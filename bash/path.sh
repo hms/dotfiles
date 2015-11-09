@@ -1,4 +1,4 @@
-export PATH=$HOME/.dotfiles/bin:$HOME/bin:/usr/local/bin:/usr/local/share/python:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/.dotfiles/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 # Android SDK
 if [ -d /opt/adt/sdk/platform-tools ]; then
