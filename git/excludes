@@ -1,3 +1,27 @@
 tags
 gems.tags
+/**/.DS_Store
+
+# Basic tool chain stuff
 /.vimrc
+/.idea
+
+# Ignore bundler config.
+/.bundle
+
+# rails specific
+config/database.yml
+config/application.yml
+config/initializers/secret_token.rb
+
+# rails with rspec specific
+.rspec
+/spec/tmp
+/spec/**/examples.txt
+/coverage/
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# heroku
+.env
