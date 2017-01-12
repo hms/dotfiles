@@ -2,3 +2,4 @@
 puts 'Loading ~/.irbrc'
 
 load File.expand_path('.dotfiles/bash/irbrc.rb', '~')
+load File.expand_path('.dotfiles/bash/pryrc.rb', '~')

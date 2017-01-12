@@ -5,6 +5,7 @@ gems.tags
 # Basic tool chain stuff
 /.vimrc
 /.idea
+.env*
 
 # Ignore bundler config.
 /.bundle
@@ -22,6 +23,3 @@ config/initializers/secret_token.rb
 
 # Ignore Byebug command history file.
 .byebug_history
-
-# heroku
-.env
