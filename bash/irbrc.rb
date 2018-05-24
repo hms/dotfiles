@@ -25,7 +25,7 @@ if defined?(Hirb)
 end
 
 if defined?(AwesomePrint)
-  AwesomePrint.irb!
+  # AwesomePrint.irb!
 end
 
 #############################################

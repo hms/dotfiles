@@ -2,6 +2,7 @@ export PATH=$HOME/.dotfiles/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/lo
 
 # added for go
 export PATH=$GOPATH/bin:$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=$GOPATH:$HOME/devel/go
 
 # Android SDK
 if [ -d /opt/adt/sdk/platform-tools ]; then
