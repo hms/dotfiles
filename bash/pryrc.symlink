@@ -1,5 +1,5 @@
 #vim:ft=ruby
 puts 'Loading ~/.irbrc'
 
-load File.expand_path('.dotfiles/bash/irbrc.rb', '~')
-load File.expand_path('.dotfiles/bash/pryrc.rb', '~')
+load File.expand_path('~/devel/dotfiles/bash/irbrc.rb', '~')
+load File.expand_path('~/devel/dotfiles/bash/pryrc.rb', '~')
