@@ -1,0 +1,1 @@
+alias golint="gometalinter -e \"^\.\.\""
