@@ -3,8 +3,10 @@
 set -o vi
 
 # Make bash check its window size after each command, to keep $LINES and
-# $COLUMNS correct.
-shopt -s checkwinsize
+# $COLUMNS correct. There is no equivilent for zsh
+if [ $SHELL = "/bin/bash" ]; then
+	shopt -s checkwinsize # bash
+fi
 
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
