@@ -1,6 +1,6 @@
 tags
 gems.tags
-/**/.DS_Store
+.DS_Store
 
 # Basic tool chain stuff
 /.vimrc

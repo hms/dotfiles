@@ -1,15 +1,15 @@
 [include]
-  path = .dotfiles/git/branch.git
-  path = .dotfiles/git/colour.git
-  path = .dotfiles/git/commit.git
-  path = .dotfiles/git/complete.git
-  path = .dotfiles/git/core.git
-  path = .dotfiles/git/diff.git
-  path = .dotfiles/git/github.git
-  path = .dotfiles/git/help.git
-  path = .dotfiles/git/log.git
-  path = .dotfiles/git/refs.git
-  path = .dotfiles/git/remote.git
+  path = ~/Devel/dotfiles/git/branch.git
+  path = ~/Devel/dotfiles/git/colour.git
+  path = ~/Devel/dotfiles/git/commit.git
+  path = ~/Devel/dotfiles/git/complete.git
+  path = ~/Devel/dotfiles/git/core.git
+  path = ~/Devel/dotfiles/git/diff.git
+  path = ~/Devel/dotfiles/git/github.git
+  path = ~/Devel/dotfiles/git/help.git
+  path = ~/Devel/dotfiles/git/log.git
+  path = ~/Devel/dotfiles/git/refs.git
+  path = ~/Devel/dotfiles/git/remote.git
 
 # vim:ft=gitconfig:
 [user]
