@@ -1,4 +1,8 @@
 #vim:ft=ruby
 puts 'Loading ~/.irbrc'
 
-load File.expand_path('~/devel/dotfiles/bash/irbrc.rb', '~')
+load File.expand_path('~/Devel/dotfiles/bash/irbrc.rb', '~')
+return if RUBY_VERSION == '2.6.5'
+
+irb.conf[:AUTO_INDENT]
+irb.conf[:SAVE_HISTOR] = 1000

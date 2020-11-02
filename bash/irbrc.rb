@@ -4,28 +4,11 @@ require 'rubygems' rescue nil
 
 #############################################
 #
-# install helpful gems for every irb session
+# install / configure helpful gems for every irb session
 #
 #############################################
 if defined?(Hirb)
   Hirb.enable
-
-  def resize
-    return 'Hirb not loaded' unless defined?(Hirb)
-
-    width = `tput cols`.to_i
-    Hirb.enable(width: width, pager: false)
-    'Resized';
-  end
-
-  def wide
-    return 'Hirb not loaded' unless defined?(Hirb)
-    Hirb.enable(width: 250);
-  end
-end
-
-if defined?(AwesomePrint)
-  # AwesomePrint.irb!
 end
 
 #############################################
@@ -34,8 +17,6 @@ end
 #
 # ###########################################
 begin
-  require 'hirb/import_object'
-
   class DelayedJob < ApplicationRecord; end
 
   def delayed_info(from: 0, to: 1_000_000_000, trace: 5)
@@ -52,9 +33,29 @@ rescue
   puts 'DelayedJob support not available'
 end
 
+def env
+  ENV.select { |k, _| k =~ /ruby|rails|rack/i }
+end
+
+if defined?(Hirb)
+  def hr
+    Hirb::View.resize
+  end
+
+  def hd
+    Hirb.disable
+  end
+
+  def he
+    Hirb.enable
+  end
+end
+
 def my_helpers
   puts 'delayed_info: information on the delayed_jobs table'
-  puts 'resize: Hirb.enable(width: `tputs cols`)'
-  puts 'wide: Hirb.enable(width: 250)'
+  puts 'hr: resize the hirb printing'
+  puts 'hd: disable hirb'
+  puts 'he: enable hirb'
+  puts 'env: display ruby/rails/rack env variables'
 end
 
