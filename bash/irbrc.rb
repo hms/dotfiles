@@ -1,15 +1,10 @@
 #vim:ft=ruby
-require 'irb/completion'
-require 'rubygems' rescue nil
 
 #############################################
 #
 # install / configure helpful gems for every irb session
 #
 #############################################
-if defined?(Hirb)
-  Hirb.enable
-end
 
 #############################################
 #
@@ -18,44 +13,49 @@ end
 # ###########################################
 begin
   class DelayedJob < ApplicationRecord; end
-
-  def delayed_info(from: 0, to: 1_000_000_000, trace: 5)
-    DelayedJob.where('id > ?', from).where('id < ?', to).to_a.map do |row|
-      klass = YAML::load(row.handler)
-      err = row.last_error.nil? ? '' : row.last_error.split("\n")[0, trace].join("\n\t")
-
-      puts "#{row.id}: #{klass.job_data['job_class']} - attempts: #{row.attempts}, run_in: #{(row.run_at - Time.current).round} second"
-      puts "\t#{err}"
-      puts
-    end;
-  end
 rescue
-  puts 'DelayedJob support not available'
 end
 
 def env
   ENV.select { |k, _| k =~ /ruby|rails|rack/i }
 end
 
-if defined?(Hirb)
-  def hr
-    Hirb::View.resize
-  end
-
-  def hd
-    Hirb.disable
-  end
-
-  def he
-    Hirb.enable
+class Object
+  def lm
+    (methods - Object.instance_methods).sort
   end
 end
 
-def my_helpers
-  puts 'delayed_info: information on the delayed_jobs table'
-  puts 'hr: resize the hirb printing'
-  puts 'hd: disable hirb'
-  puts 'he: enable hirb'
+# copy a string to the clipboard
+def cp(string)
+  `echo "#{string} | pbcopy`
+  puts 'copied to clipboard'
+end
+
+# sets defaults for TablePrint, if it's installed
+if defined?(TablePrint)
+  if defined?(User)
+    tp.set User, :id, :email, :first_name, :last_name, :title, :updated_at
+  end
+
+  if defined?(Practice)
+    tp.set Practice, :id, :name, :addr1, :city, :state, :zip
+  end
+
+  if defined?(Viewer)
+    tp.set Viewer, :login, :practice_id, { encounter_id: lambda { |e| e.encounter_id[0..12] } }, :sign_in_count, :current_sign_in_at, :last_sign_in_at
+  end
+
+  if defined?(Encounter)
+    tp.set Encounter, { id: lambda { |e| e.id[0..12] } }, :practice_id, :user_id, :completed_at, :updated_at
+  end
+end
+
+def ll
+  puts '***'
+  puts 'cp(string): copy string to clipboard'
   puts 'env: display ruby/rails/rack env variables'
+  puts 'lm: local methods for this object'
+  puts '***'
 end
 
