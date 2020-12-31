@@ -2,7 +2,7 @@
 puts 'Loading ~/.irbrc'
 
 load File.expand_path('~/Devel/dotfiles/bash/irbrc.rb', '~')
-return if RUBY_VERSION == '2.6.5'
+return if RUBY_VERSION == '2.6.5' || RUBY_VERSION[..2] == '2.7' || RUBY_VERSION[0] == '3'
 
 irb.conf[:AUTO_INDENT]
 irb.conf[:SAVE_HISTOR] = 1000
