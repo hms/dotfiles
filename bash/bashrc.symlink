@@ -10,4 +10,4 @@ done
 # vim:ft=sh:
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PS1="\h:\W \u\$ "
+# export PS1="\h:\W \u\$ "
