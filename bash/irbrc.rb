@@ -12,7 +12,16 @@
 #
 # ###########################################
 begin
-  class DelayedJob < ApplicationRecord; end
+  # Non-rails behavior goes here
+  return unless defined?(Rails) == 'constant'
+
+  unless defined?(DelayedJob) == 'constant'
+    class DelayedJob < ApplicationRecord; end
+  end
+
+  # Add Rails version to the env and .rails_version (so we can add it to the prompt)
+  File.open('.rails_version', 'w') { |f| f.write(Rails.version) }
+  ENV['RAILS_VERSION'] = Rails.version
 rescue
 end
 
@@ -32,23 +41,9 @@ def cp(string)
   puts 'copied to clipboard'
 end
 
-# sets defaults for TablePrint, if it's installed
-if defined?(TablePrint)
-  if defined?(User)
-    tp.set User, :id, :email, :first_name, :last_name, :title, :updated_at
-  end
-
-  if defined?(Practice)
-    tp.set Practice, :id, :name, :addr1, :city, :state, :zip
-  end
-
-  if defined?(Viewer)
-    tp.set Viewer, :login, :practice_id, { encounter_id: lambda { |e| e.encounter_id[0..12] } }, :sign_in_count, :current_sign_in_at, :last_sign_in_at
-  end
-
-  if defined?(Encounter)
-    tp.set Encounter, { id: lambda { |e| e.id[0..12] } }, :practice_id, :user_id, :completed_at, :updated_at
-  end
+if File.exist?('.irbrc')
+  puts "Executing project local .irbrc"
+  eval(File.read('.irbrc')) 
 end
 
 def ll
@@ -58,4 +53,3 @@ def ll
   puts 'lm: local methods for this object'
   puts '***'
 end
-

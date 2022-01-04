@@ -6,6 +6,7 @@ gems.tags
 /.vimrc
 /.idea
 .env*
+.rails_version
 
 # Ignore bundler config.
 /.bundle

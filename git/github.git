@@ -1,5 +1,5 @@
 [alias]
-  pr = !hub pull-request
+  # pr = !hub pull-request
 
 
 # vim:ft=gitconfig:
