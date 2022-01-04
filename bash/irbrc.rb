@@ -20,7 +20,7 @@ begin
   end
 
   # Add Rails version to the env and .rails_version (so we can add it to the prompt)
-  File.open('.rails_version', 'w') { |f| f.write(Rails.version) }
+  File.open('.rails-version', 'w') { |f| f.write(Rails.version) }
   ENV['RAILS_VERSION'] = Rails.version
 rescue
 end
