@@ -4,6 +4,7 @@ if [ -z "$PS1" ]; then return; fi
 DOTFILES=$HOME/devel/dotfiles
 
 for bash_file in `ls $DOTFILES/bash/*/*.sh $DOTFILES/bash/*.sh`; do
+  echo "bashrc processing " $bash_file
   source $bash_file
 done
 

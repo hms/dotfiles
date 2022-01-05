@@ -111,12 +111,12 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Read my env
-DOTROOT=$HOME/Devel/dotfiles
-DOTFILES=($DOTROOT/bash/*.sh $DOTROOT/bash/*/*.sh)
+# DOTROOT=$HOME/Devel/dotfiles
+# DOTFILES=($DOTROOT/bash/*.sh $DOTROOT/bash/*/*.sh)
 
-for file in $DOTFILES; do
-	source $file
-done
+# for file in $DOTFILES; do
+# 	source $file
+# done
 # export PATH="/usr/local/opt/qt/bin:$PATH"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit

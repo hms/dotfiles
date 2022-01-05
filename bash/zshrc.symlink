@@ -3,7 +3,11 @@ if [ -z "$PS1" ]; then return; fi
 
 DOTFILES=$HOME/devel/dotfiles
 
-for sh_file in `ls $DOTFILES/bash/zshrc.zsh $DOTFILES/bash/*/*.sh $DOTFILES/bash/*.sh`; do
+# echo 'Sourcing .zshrc'
+source $DOTFILES/bash/zshrc.zsh
+
+for sh_file in `ls $DOTFILES/bash/*/*.sh $DOTFILES/bash/*.sh`; do
+  # echo "zshrc processing " $sh_file
   source $sh_file
 done
 
