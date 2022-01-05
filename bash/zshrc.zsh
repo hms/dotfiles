@@ -11,7 +11,7 @@ export ZSH="/Users/hms/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="simple"
+ZSH_THEME="simple_hms"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,9 +75,14 @@ plugins=(
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
+	dirhistory
+	history
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# needed for commands down below
+DOTROOT=$HOME/Devel/dotfiles
 
 # User configuration
 
@@ -102,7 +107,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim $DOTFILES/bash/zshrc.zsh"
 # alias ohmyzsh="mvim ~/.oh-my-zsh"
 
 # I started here
@@ -110,14 +115,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 bindkey -v
 export KEYTIMEOUT=1
 
-# Read my env
-# DOTROOT=$HOME/Devel/dotfiles
-# DOTFILES=($DOTROOT/bash/*.sh $DOTROOT/bash/*/*.sh)
-
-# for file in $DOTFILES; do
-# 	source $file
-# done
-# export PATH="/usr/local/opt/qt/bin:$PATH"
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
 autoload -U +X bashcompinit && bashcompinit
