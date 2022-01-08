@@ -1,0 +1,5 @@
+" GUI is running or is about to start.
+" Maximize gvim window
+set lines=999 columns=200
+
+set guifont=Monaco:h14

@@ -95,7 +95,7 @@ DOTROOT=$HOME/Devel/dotfiles
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='vim'
+  export EDITOR='mvim'
 fi
 
 # Compilation flags
@@ -107,7 +107,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim $DOTFILES/bash/zshrc.zsh"
+alias zshconfig="mvim $DOTFILES/bash/zshrc.zsh"
 # alias ohmyzsh="mvim ~/.oh-my-zsh"
 
 # I started here

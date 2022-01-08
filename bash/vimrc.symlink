@@ -1,0 +1,13 @@
+" This is console Vim
+if exists("+lines")
+	set lines=40
+endif
+
+if exists("+columns")
+	set columns=180
+endif
+
+set statusline+=%#warningmsg#
+set statusline+=%*
+
+let ruby_operators = 1

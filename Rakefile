@@ -18,6 +18,7 @@ task :install do
     if File.exists?(dest_file) || File.symlink?(dest_file)
       puts "#{dest_file} exists -- skipping"
     else
+      puts "#{dest_file} exists -- Installing"
       FileUtils.ln_s symlink_file, dest_file 
     end
   end

@@ -8,11 +8,11 @@ else
     set lines=40
   endif
   if exists("+columns")
-    set columns=150
+    set columns=180
   endif
 endif
 
-set guifont=consolas:h16
+set guifont=consolas:h18
 
 set statusline+=%#warningmsg#
 set statusline+=%*
