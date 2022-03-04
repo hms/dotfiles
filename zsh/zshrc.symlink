@@ -15,10 +15,10 @@ source $SRCFILES/path.sh
 source $SRCFILES/term.sh
 source $SRCFILES/git-completion.sh
 
-# for sh_file in `ls $DOTFILES/bash/**/*.sh`; do
+for sh_file in `ls $SRCFILES/Alias/*.sh`; do
   # echo "zshrc processing " $sh_file
-  # source $sh_file
-# done
+  source $sh_file
+done
 
 # vim:ft=sh:
 
