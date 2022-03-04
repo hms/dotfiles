@@ -1,4 +1,4 @@
-echo "in .zshrc"
+# echo "in .zshrc"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -81,9 +81,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# needed for commands down below
-DOTROOT=$HOME/Devel/dotfiles
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -108,7 +105,7 @@ fi
 #
 # Example aliases
 alias zshconfig="mvim $DOTFILES/bash/zshrc.zsh"
-# alias ohmyzsh="mvim ~/.oh-my-zsh"
+alias ohmyzsh="mvim ~/.oh-my-zsh"
 
 # I started here
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -119,6 +116,3 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
-
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/hms/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
