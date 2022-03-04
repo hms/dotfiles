@@ -1,0 +1,9 @@
+# echo 'Sourcing .zshrc'
+source $DOTFILES/zsh/zshrc.zsh
+
+for sh_file in `ls $DOTFILES/bash/*/*.sh $DOTFILES/bash/*.sh`; do
+  # echo "zshrc processing " $sh_file
+  source $sh_file
+done
+
+# vim:ft=sh:

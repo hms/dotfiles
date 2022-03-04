@@ -1,0 +1,4 @@
+# login shells should do at least everything that interactive shells do.
+[ -f ~/.zshrc ] && source ~/.zshrc
+
+# vim:ft=sh:
