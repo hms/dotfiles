@@ -1,9 +1,26 @@
-# echo 'Sourcing .zshrc'
-source $DOTFILES/zsh/zshrc.zsh
+# Standard bashrc early escape when not running interactively. Not sure we want this anymore
+# if [ -z "$PS1" ]; then return; fi
 
-for sh_file in `ls $DOTFILES/bash/*/*.sh $DOTFILES/bash/*.sh`; do
+# echo 'Sourcing .zshrc'
+SRCFILES=$DOTFILES/zsh
+
+source $SRCFILES/zshrc.sh
+source $SRCFILES/cli.sh
+source $SRCFILES/rvm.sh
+source $SRCFILES/ruby.sh
+source $SRCFILES/heroku.sh
+source $SRCFILES/less.sh
+source $SRCFILES/ls.sh
+source $SRCFILES/path.sh
+source $SRCFILES/term.sh
+source $SRCFILES/git-completion.sh
+
+# for sh_file in `ls $DOTFILES/bash/**/*.sh`; do
   # echo "zshrc processing " $sh_file
-  source $sh_file
-done
+  # source $sh_file
+# done
 
 # vim:ft=sh:
+
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# export PS1="\h:\W \u\$ "
