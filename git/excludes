@@ -4,7 +4,8 @@ gems.tags
 
 # Basic tool chain stuff
 /.vimrc
-/.idea
+.idea/
+/.idea/
 .env*
 .rails_version
 
@@ -12,7 +13,7 @@ gems.tags
 /.bundle
 
 # rails specific
-config/database.yml
+# config/database.yml
 config/application.yml
 config/initializers/secret_token.rb
 

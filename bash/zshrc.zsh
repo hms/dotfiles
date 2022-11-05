@@ -76,6 +76,7 @@ plugins=(
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 	dirhistory
+	zsh-exa
 	history
 )
 

@@ -1,7 +1,7 @@
 # echo "in .zshrc"
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/Users/hms/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/hms/.oh-my-zsh"
@@ -72,6 +72,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	autoupdate
 	git
 	zsh-syntax-highlighting
 	zsh-autosuggestions
@@ -104,7 +105,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mvim $DOTFILES/bash/zshrc.zsh"
+alias zshconfig="mvim $DOTFILES/zsh/zshrc.sh"
 alias ohmyzsh="mvim ~/.oh-my-zsh"
 
 # I started here
@@ -112,7 +113,5 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 bindkey -v
 export KEYTIMEOUT=1
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/bit bit
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit

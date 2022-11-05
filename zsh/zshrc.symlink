@@ -1,3 +1,4 @@
+# vim:ft=sh:
 # Standard bashrc early escape when not running interactively. Not sure we want this anymore
 # if [ -z "$PS1" ]; then return; fi
 
@@ -11,16 +12,9 @@ source $SRCFILES/ruby.sh
 source $SRCFILES/heroku.sh
 source $SRCFILES/less.sh
 source $SRCFILES/ls.sh
-source $SRCFILES/path.sh
-source $SRCFILES/term.sh
 source $SRCFILES/git-completion.sh
 
 for sh_file in `ls $SRCFILES/Alias/*.sh`; do
   # echo "zshrc processing " $sh_file
   source $sh_file
 done
-
-# vim:ft=sh:
-
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# export PS1="\h:\W \u\$ "

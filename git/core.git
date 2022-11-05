@@ -1,7 +1,7 @@
 [core]
 	editor = /usr/bin/vim
-  excludesfile = ~/.dotfiles/git/excludes
+	excludesfile = ~Devel/dotfiles/git/excludes
 [push]
-  default = simple
+	default = simple
 
 # vim:ft=gitconfig:
