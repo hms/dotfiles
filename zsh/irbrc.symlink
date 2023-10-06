@@ -1,4 +1,29 @@
 #vim:ft=ruby
 puts 'Loading ~/.irbrc'
 
+# AwesomePrint.irb! if defined?(AwesomePrint)
+if defined?(AmazingPrint)
+  require 'amazing_print'
+  AmazingPrint.irb! 
+end
+
+if defined? Rails
+  root = File.basename(Dir.pwd)
+  color = root == 'so5' ? "#{AmazingPrint::Colors.cyan(root)}" : "#{AmazingPrint::Colors.red(root)}"
+
+  store_mode = defined?(ShrineConfigService) ? "-#{ShrineConfigService.instance.store_mode}" : ''
+  env = Rails.env == 'development' ? Rails.env[...3] : Rails.env[...4]
+  prompt = "#{color} [#{env}#{store_mode}]"
+
+  IRB.conf[:PROMPT] ||= {}
+  IRB.conf[:PROMPT][:RAILS] = {
+    :PROMPT_I => "#{prompt} %03n > ",
+    :PROMPT_S => "#{prompt} %03n * ",
+    :PROMPT_C => "#{prompt} %03n ? "
+  }
+
+  IRB.conf[:PROMPT_MODE] = :RAILS
+end
+
+
 load File.expand_path('~/Devel/dotfiles/bash/irbrc.rb', '~')

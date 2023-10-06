@@ -1,5 +1,5 @@
-alias ls='exa --group-directories-first --icons --color-scale'
-alias lt='exa --tree --level=2 --icons' # Show in tree view
+alias ls='eza --group-directories-first --icons --color-scale'
+alias lt='eza --tree --level=2 --icons' # Show in tree view
 alias l='ls -a'                         # Short, all files
 alias ld='ls -D'                        # Short, only directories
 alias ll='ls -lbG --git'                # Long, file size prefixes, grid, git status
