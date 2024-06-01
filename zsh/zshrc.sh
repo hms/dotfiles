@@ -1,7 +1,7 @@
 # echo "in .zshrc"
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/Users/hms/.cargo/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/libpq/bin:/Users/hms/.cargo/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/hms/.oh-my-zsh"
@@ -98,6 +98,7 @@ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch arm64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

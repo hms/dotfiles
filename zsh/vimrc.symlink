@@ -1,10 +1,10 @@
 " This is console Vim
 if exists("+lines")
-	set lines=40
+	set lines=42
 endif
 
 if exists("+columns")
-	set columns=180
+	set columns=215
 endif
 
 set statusline+=%#warningmsg#

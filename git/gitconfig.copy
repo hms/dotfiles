@@ -76,6 +76,7 @@
 
 [core]
 	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore_global
 
 [color]
   grep = true
