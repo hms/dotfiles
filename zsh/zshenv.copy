@@ -1,1 +1,5 @@
 export DOTFILES=$HOME/Devel/dotfiles
+
+# https://github.com/rbenv/ruby-build/issues/1388
+export CPPFLAGS="$CPPFLAGS -I $HOMEBREW_PREFIX/include"
+export LDFLAGS="$LDFLAGS -L $HOMEBREW_PREFIX/lib"

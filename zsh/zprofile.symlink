@@ -1,7 +1,8 @@
 # For rbenv
-eval "$(rbenv init - --no-rehash zsh)"
+eval $(/opt/homebrew/bin/brew shellenv)
+# eval "$(rbenv init - --no-rehash zsh)"
 
-FPATH=~/.rbenv/completions:"$FPATH"
+# FPATH=~/.rbenv/completions:"$FPATH"
 
-autoload -U compinit
-compinit
+# autoload -U compinit
+# compinit

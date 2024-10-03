@@ -1,2 +1,6 @@
 rvm_silence_path_mismatch_check_flag=1
-# rvm_configure_env=(--with-yjit --with-openssl-dir=$(brew --prefix openssl@3) --with-jemalloc-dir=$(brew --prefix jemalloc))
+rvm_configure_env=(
+	RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3) --with-jemalloc-dir=$(brew --prefix jemalloc)"
+	LDFLAGS="-L$(brew --prefix jemalloc)/lib"
+	CPPFLAGS="-I$(brew --prefix jemalloc)/include"
+)

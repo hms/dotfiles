@@ -1,7 +1,19 @@
 # echo "in .zshrc"
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/libpq/bin:/Users/hms/.cargo/bin:$PATH
+# .cargo/bin is REQUIRED for Ruby to build YJIT!
+export PATH=$PATH:$HOME/bin:/Users/hms/.cargo/bin
+
+# export PATH=$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt
+
+#
+# FIXME: do we need the homebrew stuff with what we've added to zshenv?  
+#   For sure, do we need libpq???
+#   Since we're not using rust, the .cargo stuff can be on home
+# export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/homebrew/opt/libpq/bin:/Users/hms/.cargo/bin:$PATH
+
+# https://github.com/rbenv/ruby-build/issues/1388
+export CPPFLAGS="$CPPFLAGS -I$HOMEBREW_PREFIX/include"
+export LDFLAGS="$LDFLAGS -L$HOMEBREW_PREFIX/lib"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/hms/.oh-my-zsh"
@@ -78,6 +90,7 @@ plugins=(
 	zsh-autosuggestions
 	dirhistory
 	history
+	asdf
 )
 
 source $ZSH/oh-my-zsh.sh
