@@ -90,7 +90,6 @@ plugins=(
 	zsh-autosuggestions
 	dirhistory
 	history
-	asdf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='mvim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -119,13 +118,13 @@ export ARCHFLAGS="-arch arm64"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mvim $DOTFILES/zsh/zshrc.sh"
-alias ohmyzsh="mvim ~/.oh-my-zsh"
+alias zshconfig="nvim $DOTFILES/zsh/zshrc.sh"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 # I started here
 fpath=(/usr/local/share/zsh-completions $fpath)
 bindkey -v
 export KEYTIMEOUT=1
 
-autoload -U +X bashcompinit && bashcompinit
+# autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit

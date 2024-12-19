@@ -1,5 +1,5 @@
 [core]
-	editor = /usr/bin/vim
+	editor = /opt/homebrow/bin/nvim
 	excludesfile = ~Devel/dotfiles/git/excludes
 [push]
 	default = simple
