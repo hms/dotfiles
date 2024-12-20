@@ -12,7 +12,7 @@ source $SRCFILES/ruby.sh
 source $SRCFILES/heroku.sh
 source $SRCFILES/less.sh
 source $SRCFILES/ls.sh
-source $SRCFILES/git-completion.sh
+# source $SRCFILES/git-completion.sh
 
 for sh_file in `ls $SRCFILES/Alias/*.sh`; do
   # echo "zshrc processing " $sh_file

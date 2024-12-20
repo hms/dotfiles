@@ -2,5 +2,8 @@
 # history, navigate lines with bw, &c.)
 set -o vi
 
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
+# export EDITOR=/usr/bin/vim
+# export VISUAL=/usr/bin/vim
+
+export EDITOR=/opt/homebrew/bin/nvim
+export VISUAL=/opt/homebrew/bin/nvim
