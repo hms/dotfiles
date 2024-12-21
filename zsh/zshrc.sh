@@ -119,3 +119,4 @@ export KEYTIMEOUT=1
 
 # autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/bit bit
+eval "$(/opt/homebrew/bin/mise activate zsh)"

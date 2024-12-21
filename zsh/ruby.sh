@@ -1,4 +1,4 @@
-# rbenv is setup via .zprofile
+export RUBY_YJIT_ENABLE=1
 export RAILS_MAX_THREAD=25
 
 # Support auto switching rubies
