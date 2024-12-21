@@ -1,4 +1,5 @@
 export RUBY_YJIT_ENABLE=1
+export MISE_RUBY_BUILD_OPTS="--with-jemalloc"
 export RAILS_MAX_THREAD=25
 
 # Support auto switching rubies

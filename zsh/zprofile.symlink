@@ -1,2 +1,10 @@
 eval $(/opt/homebrew/bin/brew shellenv)
+
+# mise
 eval "$(mise activate zsh --shims)"
+# ~/.zprofile
+# if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+#   eval "$($HOME/.local/bin/mise activate zsh --shims)"
+# else
+#   eval "$($HOME/.local/bin/mise activate zsh)"
+# fi

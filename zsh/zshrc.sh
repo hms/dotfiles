@@ -1,7 +1,7 @@
 # echo "in .zshrc"
 
 # .cargo/bin is REQUIRED for Ruby to build YJIT!
-export PATH=$PATH:$HOME/bin:/Users/hms/.cargo/bin
+export PATH=$PATH:$HOME/bin:bin:/Users/hms/.cargo/bin
 
 export CPPFLAGS="$CPPFLAGS -I$HOMEBREW_PREFIX/include"
 export LDFLAGS="$LDFLAGS -L$HOMEBREW_PREFIX/lib"
@@ -76,11 +76,14 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	autoupdate
-	git
-	zsh-syntax-highlighting
-	zsh-autosuggestions
 	dirhistory
+	git
 	history
+	mise
+	rails
+	ruby
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
